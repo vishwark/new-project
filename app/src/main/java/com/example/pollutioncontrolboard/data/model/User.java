@@ -119,85 +119,84 @@ class Pollution {
         this.uid = uid;
     }
 
-    public void setAqi(String aqi) {
-        this.aqi = aqi;
-    }
-
-    public void setCo(String co) {
-        this.co = co;
-    }
-
-    public void setDew(String dew) {
-        this.dew = dew;
-    }
-
-    public void setNo2(String no2) {
-        this.no2 = no2;
-    }
-
-    public void setO3(String o3) {
-        this.o3 = o3;
-    }
-
-    public void setPm10(long pm10) {
-        this.pm10 = pm10;
-    }
-
-    public void setPm25(String pm25) {
-        this.pm25 = pm25;
-    }
-
-    public void setSo2(String so2) {
-        this.so2 = so2;
-    }
-
-    public void setT(String t) {
-        this.t = t;
-    }
-
-    public String getAqi() {
-        return aqi;
-    }
-
-    public String getCo() {
-        return co;
-    }
-
-    public String getDew() {
-        return dew;
-    }
-
-    public String getNo2() {
-        return no2;
-    }
-
-    public String getO3() {
-        return o3;
-    }
-
-    public long getPm10() {
-        return pm10;
-    }
-
-    public String getPm25() {
-        return pm25;
-    }
-
-    public String getSo2() {
-        return so2;
-    }
-
-    public String getT() {
-        return t;
-    }
-
-
     public String getCity() {
         return city;
     }
 
     public void setCity(String city) {
         this.city = city;
+    }
+
+    public String getAqi() {
+        return aqi;
+    }
+
+    public void setAqi(String aqi) {
+        this.aqi = aqi;
+    }
+
+    public String getCo() {
+        return co;
+    }
+
+    public void setCo(String co) {
+        this.co = co;
+    }
+
+    public String getDew() {
+        return dew;
+    }
+
+    public void setDew(String dew) {
+        this.dew = dew;
+    }
+
+    public String getNo2() {
+        return no2;
+    }
+
+    public void setNo2(String no2) {
+        this.no2 = no2;
+    }
+
+    public String getO3() {
+        return o3;
+    }
+
+    public void setO3(String o3) {
+        this.o3 = o3;
+    }
+
+    public long getPm10() {
+        return pm10;
+    }
+
+    public void setPm10(long pm10) {
+        this.pm10 = pm10;
+    }
+
+    public String getPm25() {
+        return pm25;
+    }
+
+    public void setPm25(String pm25) {
+        this.pm25 = pm25;
+    }
+
+    public String getSo2() {
+        return so2;
+    }
+
+    public void setSo2(String so2) {
+        this.so2 = so2;
+    }
+
+    public String getT() {
+        return t;
+    }
+
+    public void setT(String t) {
+        this.t = t;
     }
 }
 
@@ -212,32 +211,32 @@ class City {
     @ColumnInfo(name="city_name")
     private String city_name;
 
-    @ColumnInfo(name="pid")
-    private String pid;
-
     public int getCid() {
         return cid;
-    }
-
-    public String getCity_name() {
-        return city_name;
-    }
-
-    public String getPid() {
-        return pid;
     }
 
     public void setCid(int cid) {
         this.cid = cid;
     }
 
+    public String getCity_name() {
+        return city_name;
+    }
+
     public void setCity_name(String city_name) {
         this.city_name = city_name;
+    }
+
+    public String getPid() {
+        return pid;
     }
 
     public void setPid(String pid) {
         this.pid = pid;
     }
+
+    @ColumnInfo(name="pid")
+    private String pid;
 
 
 
@@ -298,8 +297,42 @@ class Health {
     @ColumnInfo(name = "aqi")
     private int aqi ;
 
-    @ColumnInfo(name = "status")
-    private int aqi ;
+    public int getCid() {
+        return cid;
+    }
+
+    public void setCid(int cid) {
+        this.cid = cid;
+    }
+
+    public String getCity_name() {
+        return city_name;
+    }
+
+    public void setCity_name(String city_name) {
+        this.city_name = city_name;
+    }
+
+    public String getPid() {
+        return pid;
+    }
+
+    public void setPid(String pid) {
+        this.pid = pid;
+    }
+
+    public int getAqi() {
+        return aqi;
+    }
+
+    public void setAqi(int aqi) {
+        this.aqi = aqi;
+    }
+
+
+
+   // @ColumnInfo(name = "status")
+   // private int aqi ;
 
 
 }
