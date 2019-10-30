@@ -80,6 +80,10 @@ class Pollution {
     @PrimaryKey(autoGenerate = true)
     private int uid;
 
+    @ColumnInfo(name="city")
+    private String city;
+
+
     @ColumnInfo(name="aqi")
     private String aqi;
 
@@ -188,6 +192,114 @@ class Pollution {
     }
 
 
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+}
+
+
+@Entity
+class City {
+
+    @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name="cid")
+    private int cid;
+
+    @ColumnInfo(name="city_name")
+    private String city_name;
+
+    @ColumnInfo(name="pid")
+    private String pid;
+
+    public int getCid() {
+        return cid;
+    }
+
+    public String getCity_name() {
+        return city_name;
+    }
+
+    public String getPid() {
+        return pid;
+    }
+
+    public void setCid(int cid) {
+        this.cid = cid;
+    }
+
+    public void setCity_name(String city_name) {
+        this.city_name = city_name;
+    }
+
+    public void setPid(String pid) {
+        this.pid = pid;
+    }
+
+
+
+}
+
+
+@Entity
+class Program {
+
+    @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "pid")
+    private int pid;
+
+    @ColumnInfo(name = "p_name")
+    private String p_name;
+
+    @ColumnInfo(name = "aqi")
+    private String aqi;
+
+    public int getPid() {
+        return pid;
+    }
+
+    public void setPid(int pid) {
+        this.pid = pid;
+    }
+
+    public String getP_name() {
+        return p_name;
+    }
+
+    public void setP_name(String p_name) {
+        this.p_name = p_name;
+    }
+
+    public String getAqi() {
+        return aqi;
+    }
+
+    public void setAqi(String aqi) {
+        this.aqi = aqi;
+    }
+}
+
+@Entity
+class Health {
+
+    @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "cid")
+    private int cid;
+
+    @ColumnInfo(name = "city_name")
+    private String city_name;
+
+    @ColumnInfo(name = "pid")
+    private String pid;
+
+    @ColumnInfo(name = "aqi")
+    private int aqi ;
+
+    @ColumnInfo(name = "status")
+    private int aqi ;
 
 
 }
