@@ -19,10 +19,13 @@ public interface UserDao {
 
     @Insert
     public void insertAll(User... users);
+
     @Delete
     void delete(User user);
+
     @Query("select * from Health")
     List<Health> getHealth();
+
     @Query("select count(*) from User")
     int countUsers();
     @Query("select * from User")
