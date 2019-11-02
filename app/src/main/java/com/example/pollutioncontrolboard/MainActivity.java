@@ -104,10 +104,10 @@ public class MainActivity extends AppCompatActivity {
                                     JSONObject s = p.getJSONObject("so2");
                                     String so2=s.getString("v");
                     Log.e(TAG, "Response from url: " +so2);
-//                                    JSONObject t1 = p.getJSONObject("t");
-//                                    String t=t1.getString("v");
-//                    Log.e(TAG, "Response from url: " +t);
-                                    JSONObject w1 = p.getJSONObject("w");
+                                    JSONObject t1 = p.getJSONObject("t");
+                                    String t=t1.getString("v");
+                    Log.e(TAG, "Response from url: " +t);
+                                    JSONObject w1 = p.getJSONObject("wg");
                                     String w=w1.getString("v");
                     Log.e(TAG, "Response from url: " +w);
 //                                    JSONObject w2 = p.getJSONObject("w");
@@ -123,15 +123,15 @@ public class MainActivity extends AppCompatActivity {
 
                         // adding each child node to HashMap key => value
                         p_data.put("aqi", aqi);
-                        p_data.put("co", co);
+                        p_data.put("co", "co :"+co);
                         //p_data.put("dew", dew);
-                        p_data.put("no2", no2);
-                        p_data.put("o3", o3);
-                        p_data.put("pm10",pm10);
-                        p_data.put("pm25",pm25);
-                        p_data.put("so2",so2);
+                        p_data.put("no2", "no2 :"+no2);
+                        p_data.put("o3", "o3 :"+o3);
+                        p_data.put("pm10","pm10 :"+pm10);
+                        p_data.put("pm25","pm25 :"+pm25);
+                        p_data.put("so2","so2 :"+so2);
                        // p_data.put("t", t);
-                        p_data.put("w", w);
+                        p_data.put("w", "w :"+w);
                        // p_data.put("wg",wg);
 
 
@@ -173,6 +173,9 @@ public class MainActivity extends AppCompatActivity {
                     R.layout.list_item, new String[]{ "co","no2","o3","pm10","pm25","so2","w"},
                     new int[]{R.id.co, R.id.no2,R.id.o3,R.id.pm10,R.id.pm25,R.id.so2,R.id.w});
             lv.setAdapter(adapter);
+            Toast.makeText(getApplicationContext(),
+                    "data fetching complete",
+                    Toast.LENGTH_LONG).show();
         }
     }
 
