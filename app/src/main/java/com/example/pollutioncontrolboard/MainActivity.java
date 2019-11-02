@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected Void doInBackground(Void... arg0) {HttpHandler sh = new HttpHandler();
             // Making a request to url and getting response
-            String url = "https://api.waqi.info/feed/beijing/?token=e77965fe2ea9d2510af203f0d38aa4eefcfd4a29";
+            String url = "https://api.waqi.info/feed/bangalore/?token=e77965fe2ea9d2510af203f0d38aa4eefcfd4a29";
             String jsonStr = sh.makeServiceCall(url);
 
             Log.e(TAG, "Response from url: " + jsonStr);
@@ -77,32 +77,41 @@ public class MainActivity extends AppCompatActivity {
                 try {
                     JSONObject jsonObj = new JSONObject(jsonStr);
                     JSONObject data = jsonObj.getJSONObject("data");
-
+                    Log.e(TAG, "Response from url: " + data);
 
                         String aqi = data.getString("aqi");
+                    Log.e(TAG, "Response from url: " + aqi);
 
                         JSONObject p = data.getJSONObject("iaqi");
 
-                                   JSONObject c = p.getJSONObject("co");
-                                    int co=c.getInt("co");
-                                   JSONObject d = p.getJSONObject("dew");
-                                    String dew=d.getString("dew");
+                                    JSONObject c = p.getJSONObject("co");
+                    Log.e(TAG, "Response from url: " + c);
+                                    String co=c.getString("v");
+                    Log.e(TAG, "Response from url: " +co);
+
                                     JSONObject n = p.getJSONObject("no2");
-                                    String no2=n.getString("no2");
+                                    String no2=n.getString("v");
+                    Log.e(TAG, "Response from url: " +no2);
                                     JSONObject o = p.getJSONObject("o3");
-                                    String o3=p.getString("o3");
+                                    String o3=o.getString("v");
+                    Log.e(TAG, "Response from url: " +o3);
                                     JSONObject p1 = p.getJSONObject("pm10");
-                                    String pm10=p1.getString("pm10");
+                                    String pm10=p1.getString("v");
+                    Log.e(TAG, "Response from url: " +pm10);
                                     JSONObject p2 = p.getJSONObject("pm25");
-                                    String pm25=p2.getString("pm25");
-                                   JSONObject s = p.getJSONObject("so2");
-                                    String so2=s.getString("so2");
-                                    JSONObject t1 = p.getJSONObject("t");
-                                    String t=t1.getString("t");
+                                    String pm25=p2.getString("v");
+                    Log.e(TAG, "Response from url: " +pm25);
+                                    JSONObject s = p.getJSONObject("so2");
+                                    String so2=s.getString("v");
+                    Log.e(TAG, "Response from url: " +so2);
+//                                    JSONObject t1 = p.getJSONObject("t");
+//                                    String t=t1.getString("v");
+//                    Log.e(TAG, "Response from url: " +t);
                                     JSONObject w1 = p.getJSONObject("w");
-                                    String w=w1.getString("w");
-                                    JSONObject w2 = p.getJSONObject("co2");
-                                    String wg=w2.getString("wg");
+                                    String w=w1.getString("v");
+                    Log.e(TAG, "Response from url: " +w);
+//                                    JSONObject w2 = p.getJSONObject("w");
+//                                    String wg=w2.getString("v");
 
 
 
@@ -114,16 +123,16 @@ public class MainActivity extends AppCompatActivity {
 
                         // adding each child node to HashMap key => value
                         p_data.put("aqi", aqi);
-                        p_data.put("co2", co);
-                        p_data.put("dew", dew);
+                        p_data.put("co", co);
+                        //p_data.put("dew", dew);
                         p_data.put("no2", no2);
                         p_data.put("o3", o3);
                         p_data.put("pm10",pm10);
                         p_data.put("pm25",pm25);
                         p_data.put("so2",so2);
-                        p_data.put("t", t);
+                       // p_data.put("t", t);
                         p_data.put("w", w);
-                        p_data.put("wg",wg);
+                       // p_data.put("wg",wg);
 
 
                         // adding contact to contact list
@@ -161,8 +170,8 @@ public class MainActivity extends AppCompatActivity {
         protected void onPostExecute(Void result) {
             super.onPostExecute(result);
             ListAdapter adapter = new SimpleAdapter(MainActivity.this, pollutionList,
-                    R.layout.list_item, new String[]{ "email","mobile"},
-                    new int[]{R.id.email, R.id.mobile});
+                    R.layout.list_item, new String[]{ "co","no2","o3","pm10","pm25","so2","w"},
+                    new int[]{R.id.co, R.id.no2,R.id.o3,R.id.pm10,R.id.pm25,R.id.so2,R.id.w});
             lv.setAdapter(adapter);
         }
     }

@@ -5,17 +5,52 @@
     android:orientation="vertical"
     android:padding="@dimen/activity_horizontal_margin">
     <TextView
-        android:id="@+id/email"
+        android:id="@+id/co"
+        android:text="@string/welcome"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="2dip"
         android:textColor="@color/colorAccent" />
 
     <TextView
-        android:id="@+id/mobile"
+        android:id="@+id/no2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="#5d5d5d"
         android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/o3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="2dip"
+        android:textColor="@color/colorAccent" />
+
+    <TextView
+        android:id="@+id/pm10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#5d5d5d"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/pm25"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="2dip"
+        android:textColor="@color/colorAccent" />
+
+    <TextView
+        android:id="@+id/so2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#5d5d5d"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/w"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="2dip"
+        android:textColor="@color/colorAccent" />
+
 
 </LinearLayout>
