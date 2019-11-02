@@ -83,17 +83,26 @@ public class MainActivity extends AppCompatActivity {
 
                         JSONObject p = data.getJSONObject("iaqi");
 
-
-                                    String co2=p.getString("co2");
-                                    String dew=p.getString("dew");
-                                    String no2=p.getString("no2");
+                                   JSONObject c = p.getJSONObject("co");
+                                    int co=c.getInt("co");
+                                   JSONObject d = p.getJSONObject("dew");
+                                    String dew=d.getString("dew");
+                                    JSONObject n = p.getJSONObject("no2");
+                                    String no2=n.getString("no2");
+                                    JSONObject o = p.getJSONObject("o3");
                                     String o3=p.getString("o3");
-                                    String pm10=p.getString("pm10");
-                                    String pm25=p.getString("pm25");
-                                    String so2=p.getString("so2");
-                                    String t=p.getString("t");
-                                    String w=p.getString("w");
-                                    String wg=p.getString("wg");
+                                    JSONObject p1 = p.getJSONObject("pm10");
+                                    String pm10=p1.getString("pm10");
+                                    JSONObject p2 = p.getJSONObject("pm25");
+                                    String pm25=p2.getString("pm25");
+                                   JSONObject s = p.getJSONObject("so2");
+                                    String so2=s.getString("so2");
+                                    JSONObject t1 = p.getJSONObject("t");
+                                    String t=t1.getString("t");
+                                    JSONObject w1 = p.getJSONObject("w");
+                                    String w=w1.getString("w");
+                                    JSONObject w2 = p.getJSONObject("co2");
+                                    String wg=w2.getString("wg");
 
 
 
@@ -105,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
 
                         // adding each child node to HashMap key => value
                         p_data.put("aqi", aqi);
-                        p_data.put("co2", co2);
+                        p_data.put("co2", co);
                         p_data.put("dew", dew);
                         p_data.put("no2", no2);
                         p_data.put("o3", o3);
