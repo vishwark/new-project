@@ -54,8 +54,8 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
-        TextView txtEmail = findViewById(R.id.txtEmail);
-        txtEmail.setText(email);
+       // TextView txtEmail = findViewById(R.id.txtEmail);
+        //txtEmail.setText(email);
     }
 
     private class Getpollution extends AsyncTask<Void, Void, Void> {
