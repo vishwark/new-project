@@ -8,13 +8,12 @@ import android.util.Log;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.pollutioncontrolboard.data.model.AppRepositry;
+import com.example.pollutioncontrolboard.data.AppRepositry;
+import com.example.pollutioncontrolboard.data.model.Pollution;
 import com.example.pollutioncontrolboard.data.model.User;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -25,12 +24,14 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
     private String TAG = MainActivity.class.getSimpleName();
     ArrayList<HashMap<String, String>> pollutionList;
+    AppRepositry appRepositry;
+
     private ListView lv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        AppRepositry appRepositry = new AppRepositry(getApplicationContext());
+        appRepositry = new AppRepositry(getApplicationContext());
         System.out.println("Inside main activity");
         User user = new User();
         //user.setUid(1);
@@ -47,10 +48,14 @@ public class MainActivity extends AppCompatActivity {
             System.out.println("Email : "+usr.getEmail());
             email = usr.getEmail();
 
+
+
             //json parsing
             pollutionList = new ArrayList<>();
             lv = (ListView) findViewById(R.id.list);
             new Getpollution().execute();
+
+
 
         }
 
@@ -67,9 +72,11 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        protected Void doInBackground(Void... arg0) {HttpHandler sh = new HttpHandler();
+        protected Void doInBackground(Void... arg0)
+        {
+            HttpHandler sh = new HttpHandler();
             // Making a request to url and getting response
-            String url = "https://api.waqi.info/feed/bangalore/?token=e77965fe2ea9d2510af203f0d38aa4eefcfd4a29";
+            String url ="https://api.waqi.info/feed/bangalore/?token=e77965fe2ea9d2510af203f0d38aa4eefcfd4a29";
             String jsonStr = sh.makeServiceCall(url);
 
             Log.e(TAG, "Response from url: " + jsonStr);
@@ -77,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
                 try {
                     JSONObject jsonObj = new JSONObject(jsonStr);
                     JSONObject data = jsonObj.getJSONObject("data");
+
                     Log.e(TAG, "Response from url: " + data);
 
                         String aqi = data.getString("aqi");
@@ -107,16 +115,25 @@ public class MainActivity extends AppCompatActivity {
                                     JSONObject t1 = p.getJSONObject("t");
                                     String t=t1.getString("v");
                     Log.e(TAG, "Response from url: " +t);
-                                    JSONObject w1 = p.getJSONObject("wg");
-                                    String w=w1.getString("v");
-                    Log.e(TAG, "Response from url: " +w);
-//                                    JSONObject w2 = p.getJSONObject("w");
-//                                    String wg=w2.getString("v");
+//                                    JSONObject w1 = p.getJSONObject("w");
+//                                    String w=w1.getString("v");
+//                    Log.e(TAG, "Response from url: " +w);
+////                                   JSONObject w2 = p.getJSONObject("w");
+////                                  String wg=w2.getString("v");
+
+                        List<Pollution> pollutionDataList = new ArrayList<Pollution>();
+                        Pollution pollution=new Pollution();
+                        pollution.setAqi("aqi");
+                        pollution.setCo("co");
+                        pollution.setNo2("no2");
+                        pollution.setPm10("pm10");
+                        pollution.setPm25("pm25");
+                        pollution.setO3("o3");
+                        pollutionDataList.add(pollution);
+                        appRepositry.insertpollutiondata(pollutionDataList);
 
 
-
-
-
+                        System.out.println(pollutionDataList.size());
 
                         // tmp hash map for single contact
                         HashMap<String, String> p_data = new HashMap<>();
@@ -130,9 +147,9 @@ public class MainActivity extends AppCompatActivity {
                         p_data.put("pm10","pm10 :"+pm10);
                         p_data.put("pm25","pm25 :"+pm25);
                         p_data.put("so2","so2 :"+so2);
-                       // p_data.put("t", t);
-                        p_data.put("w", "w :"+w);
-                       // p_data.put("wg",wg);
+                       //  p_data.put("t", t);
+//                        p_data.put("w", "w :"+w);
+//                       // p_data.put("wg",wg);
 
 
                         // adding contact to contact list
@@ -170,8 +187,8 @@ public class MainActivity extends AppCompatActivity {
         protected void onPostExecute(Void result) {
             super.onPostExecute(result);
             ListAdapter adapter = new SimpleAdapter(MainActivity.this, pollutionList,
-                    R.layout.list_item, new String[]{ "co","no2","o3","pm10","pm25","so2","w"},
-                    new int[]{R.id.co, R.id.no2,R.id.o3,R.id.pm10,R.id.pm25,R.id.so2,R.id.w});
+                    R.layout.list_item, new String[]{ "co","no2","o3","pm10","pm25","so2"},
+                    new int[]{R.id.co, R.id.no2,R.id.o3,R.id.pm10,R.id.pm25,R.id.so2});
             lv.setAdapter(adapter);
             Toast.makeText(getApplicationContext(),
                     "data fetching complete",

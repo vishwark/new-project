@@ -20,11 +20,18 @@ public interface UserDao {
     @Insert
     public void insertAll(User... users);
 
+//    @Query("INSERT INTO user (email,username,passwrod) values :email , :username,:password")
+//    public void insertUser(String username,String password,String email);
+
+    @Insert
+    public void insertPollution(Pollution... pollution);
+
+
     @Delete
     void delete(User user);
 
-    @Query("select * from Health")
-    List<Health> getHealth();
+    @Query("select * from Health where city_name=:city_nam")
+    List<Health> getHealth(String city_nam);
 
     @Query("select count(*) from User")
     int countUsers();
@@ -37,9 +44,6 @@ public interface UserDao {
     @Query("select * from Pollution")
     List<Pollution> getPollution();
 
-
-
-
-
-
+    @Query("select * from Health")
+       List<Health> getHealth();
 }

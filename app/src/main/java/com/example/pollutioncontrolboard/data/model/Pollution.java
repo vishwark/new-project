@@ -20,8 +20,7 @@ public class Pollution {
     @ColumnInfo(name="co")
     private String co;
 
-    @ColumnInfo(name="dew")
-    private String dew;
+
 
     @ColumnInfo(name="no2")
     private String no2;
@@ -30,7 +29,7 @@ public class Pollution {
     private String o3;
 
     @ColumnInfo(name="pm10")
-    private long pm10;
+    private String pm10;
 
     @ColumnInfo(name="pm25")
     private String pm25;
@@ -38,8 +37,7 @@ public class Pollution {
     @ColumnInfo(name="so2")
     private String so2;
 
-    @ColumnInfo(name="t")
-    private String t;
+
 
     public int getUid() {
         return uid;
@@ -73,13 +71,6 @@ public class Pollution {
         this.co = co;
     }
 
-    public String getDew() {
-        return dew;
-    }
-
-    public void setDew(String dew) {
-        this.dew = dew;
-    }
 
     public String getNo2() {
         return no2;
@@ -97,11 +88,11 @@ public class Pollution {
         this.o3 = o3;
     }
 
-    public long getPm10() {
+    public String getPm10() {
         return pm10;
     }
 
-    public void setPm10(long pm10) {
+    public void setPm10(String pm10) {
         this.pm10 = pm10;
     }
 
@@ -121,11 +112,5 @@ public class Pollution {
         this.so2 = so2;
     }
 
-    public String getT() {
-        return t;
-    }
 
-    public void setT(String t) {
-        this.t = t;
-    }
 }

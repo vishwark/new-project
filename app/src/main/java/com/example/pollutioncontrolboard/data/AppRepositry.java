@@ -1,4 +1,4 @@
-package com.example.pollutioncontrolboard.data.model;
+package com.example.pollutioncontrolboard.data;
 
 import android.content.Context;
 import android.os.AsyncTask;
@@ -10,20 +10,27 @@ import androidx.sqlite.db.SupportSQLiteOpenHelper;
 
 import com.example.pollutioncontrolboard.data.AppDatabase;
 import com.example.pollutioncontrolboard.data.dao.UserDao;
+import com.example.pollutioncontrolboard.data.model.Health;
+import com.example.pollutioncontrolboard.data.model.Pollution;
+import com.example.pollutioncontrolboard.data.model.User;
 
 import java.util.List;
 
 public class AppRepositry {
     AppDatabase appDatabase;
 
-    public AppRepositry(Context context) {
+    public AppRepositry(Context context)
+    {
         appDatabase = appDatabase.getAppDatabase(context);
     }
 
-    public void insertUser(final User user) {
-        new AsyncTask<Void, Void, Void>() {
+    public void insertUser(final User user)
+    {
+        new AsyncTask<Void, Void, Void>()
+        {
             @Override
-            protected Void doInBackground(Void... voids) {
+            protected Void doInBackground(Void... voids)
+            {
                 appDatabase.userDao().insertAll(user);
                 return null;
             }
@@ -41,4 +48,7 @@ public class AppRepositry {
         return appDatabase.userDao().getUsers();
     }
 
+    public void insertpollutiondata(List<Pollution> pollution){
+        appDatabase.userDao().insertPollution(pollution.get(0));
+   }
 }
