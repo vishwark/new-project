@@ -30,40 +30,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTheme(R.style.AppTheme_Dark);
         setContentView(R.layout.activity_main);
         appRepositry = new AppRepositry(getApplicationContext());
-        System.out.println("Inside main activity");
-        User user = new User();
-        //user.setUid(1);
-        user.setCity("Bengaluru");
-        user.setEmail("2xyz@gmail.com");
-        user.setUsername("abc");
-        user.setPassword("123456789");
-        user.setPhone(9874452145L);
-        appRepositry.insertUser(user);
-        System.out.println("Successfully inserted new user");
-        List<User> users = appRepositry.getAllUsers();
-        String email = "";
-        for(User usr : users){
-            System.out.println("Email : "+usr.getEmail());
-            email = usr.getEmail();
-
-
-
-            //json parsing
-            pollutionList = new ArrayList<>();
-            lv = (ListView) findViewById(R.id.list);
-            new Getpollution().execute();
-
-
-
-        }
-
-       // TextView txtEmail = findViewById(R.id.txtEmail);
-        //txtEmail.setText(email);
     }
 
-    private class Getpollution extends AsyncTask<Void, Void, Void> {
+    private class Getpollution extends AsyncTask<String, Void, Void> {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
@@ -72,11 +44,12 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        protected Void doInBackground(Void... arg0)
+        protected Void doInBackground(String... arg0)
         {
             HttpHandler sh = new HttpHandler();
+            String city = arg0[0];
             // Making a request to url and getting response
-            String url ="https://api.waqi.info/feed/bangalore/?token=e77965fe2ea9d2510af203f0d38aa4eefcfd4a29";
+            String url ="https://api.waqi.info/feed/"+city+"/?token=e77965fe2ea9d2510af203f0d38aa4eefcfd4a29";
             String jsonStr = sh.makeServiceCall(url);
 
             Log.e(TAG, "Response from url: " + jsonStr);

@@ -11,13 +11,17 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".City"
-            android:label="@string/title_activity_city"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:label="@string/city_label" >
         </activity>
         <activity
             android:name=".Main2Activity"
-            android:label="@string/title_activity_main2"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:label="@string/title_activity_main2" />
+        <activity
+            android:name=".RegisterActivity"
+            android:label="Register" />
+        <activity
+            android:name=".PollutionViewActivity"
+            android:label="AQI" />
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login">

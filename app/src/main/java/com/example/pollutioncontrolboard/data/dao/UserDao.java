@@ -45,5 +45,9 @@ public interface UserDao {
     List<Pollution> getPollution();
 
     @Query("select * from Health")
-       List<Health> getHealth();
+    List<Health> getHealth();
+
+    @Query("select * from user where user_name = :username and password = :password")
+    User getUserData(String username,String password);
+
 }

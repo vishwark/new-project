@@ -3,7 +3,7 @@
     <string name="title_activity_login">Sign in</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
-    <string name="action_sign_in" translatable="false">Sign in or register</string>
+    <string name="action_sign_in" translatable="false">New User? Click Here to Register</string>
     <string name="action_sign_in_short" translatable="false">Sign in</string>
     <string name="welcome">"Welcome !"</string>
     <string name="invalid_username">Not a valid username</string>
@@ -27,4 +27,51 @@
     <string name="menu_send">Send</string>
     <string name="co">co</string>
     <string name="title_activity_city">City</string>
+    <string name="city_label">View Pollution by City</string>
+    <string name="aqi_title">AQI</string>
+
+    <string name="place_holder">---</string>
+    <string name="pressure">Pressure</string>
+    <string name="humidity">Humidity</string>
+    <string name="wind">Wind</string>
+    <string name="attribution">Attributions</string>
+    <string name="pollutants_aqi">Pollutants AQI</string>
+
+    <!--AQI Scale-->
+    <string name="good">Good</string>
+    <string name="moderate">Moderate</string>
+    <string name="unhealthy_for_sensitive">Unhealthy for Sensitive Group</string>
+    <string name="unhealthy">Unhealthy</string>
+    <string name="very_unhealthy">Very Unhealthy</string>
+    <string name="hazardous">Hazardous</string>
+
+    <!--Info Dialog-->
+
+    <!--AQI Range-->
+    <string name="good_range">0 – 50</string>
+    <string name="moderate_range">51 – 100</string>
+    <string name="unhealthy_for_sensitive_range">101 – 150</string>
+    <string name="unhealthy_range">151 – 200</string>
+    <string name="very_unhealthy_range">201 – 300</string>
+    <string name="hazardous_range">300+</string>
+
+    <!--Health Implications-->
+    <string name="good_health_implications">Air quality is considered satisfactory, and air pollution poses little or no risk.</string>
+    <string name="moderate_health_implications">Air quality is acceptable; however, for some pollutants there may be a moderate health concern for a very small number of people who are unusually sensitive to air pollution.</string>
+    <string name="unhealthy_for_sensitive_health_implications">Members of sensitive groups may experience health effects. The general public is not likely to be affected.</string>
+    <string name="unhealthy_health_implications">Everyone may begin to experience health effects; members of sensitive groups may experience more serious health effects.</string>
+    <string name="very_unhealthy_health_implications">Health warnings of emergency conditions. The entire population is more likely to be affected.</string>
+    <string name="hazardous_health_implications">Health alert: everyone may experience more serious health effects.</string>
+
+    <string name="appwidget_text">AQI</string>
+    <string name="add_widget">Add widget</string>
+
+    <string name="shareText">Hey, Check the Air Quality in your area with this app: https://pollutionmonitor.page.link/RtQw</string>
+
+
+
+    <string name="temperature_unit_celsius">%1$.1f &#176;C</string>
+    <string name="humidity_unit">%1$.0f%%</string>
+    <string name="pressureplace_holder_unit">%1$.1f mb</string>
+    <string name="wind_unit">%1$.1f m/s</string>
 </resources>
