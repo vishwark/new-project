@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">PollutionControlBoard</string>
-    <string name="title_activity_login">Sign in</string>
-    <string name="prompt_email">Email</string>
+    <string name="title_activity_login">AirMo</string>
+    <string name="prompt_email">Username</string>
     <string name="prompt_password">Password</string>
     <string name="action_sign_in" translatable="false">New User? Click Here to Register</string>
     <string name="action_sign_in_short" translatable="false">Sign in</string>
@@ -9,7 +9,7 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
-    <string name="name">"POLLUTION CONTROL BOARD"</string>
+    <string name="name">"AIR POLLUTION MONITORING APP"</string>
     <string name="todo">hello</string>
     <string name="title_activity_main2">Main2Activity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -18,6 +18,15 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+    <string name="search">SEARCH</string>
+    <string name="NAME">enter your name</string>
+
+    <string name="share">"Add your idea here"</string>
+    <string name="btn10">SUBMIT</string>
+
+
+    <string name="idea">Share your AIR pollution control Ideas</string>
+
 
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
@@ -26,14 +35,32 @@
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
     <string name="co">co</string>
+    <string name="textView4">>>"Good" AQI is 0 to 50. Air quality is considered satisfactory, and air pollution poses little or no risk.
+    For example, people who are unusually sensitive to ozone may experience respiratory symptoms.</string>
+    <string name="textView5">>>"Unhealthy for Sensitive Groups" AQI is 101 to 150. Although general public is not likely to be affected at this AQI range, people with lung disease, older adults and children are at a greater risk from exposure to ozone, whereas persons with heart and lung disease, older adults and children are at greater risk from the presence of particles in the air.</string>
+    <string name="textView6">>>"Unhealthy" AQI is 151 to 200. Everyone may begin to experience some adverse health effects, and members of the sensitive groups may experience more serious effects.</string>
+    <string name="textView7">>>"Very Unhealthy" AQI is 201 to 300. This would trigger a health alert signifying that everyone may experience more serious health effects.</string>
+    <string name="textView8">>>"Hazardous" AQI greater than 300. This would trigger a health warnings of emergency conditions. The entire population is more likely to be affected.</string>
     <string name="title_activity_city">City</string>
     <string name="city_label">View Pollution by City</string>
     <string name="aqi_title">AQI</string>
-
+    <string name="textView9">>>>"At a domestic level, faulty gas appliances and cigarette smoking are significant sources of carbon monoxide. Natural processes produce relatively small amounts. Carbon monoxide reacts with other pollutants in the air to form potentially harmful ground level ozone. This occurs close to the site of emission"</string>
+    <string name="textView10">>>>"These gases, especially SO2, are emitted by the burning of fossil fuels — coal, oil, and diesel — or other materials that contain sulfur. Sources include power plants, metals processing and smelting facilities, and vehicles."</string>
+    <string name="textView11">>>"Nitrogen Dioxide (NO2) Pollution. NO2 primarily gets in the air from the burning of fuel. NO2 forms from emissions from cars, trucks and buses, power plants, and off-road equipment."</string>
+    <string name="textView12">>>"Particulate matter particles can either originate from antropogenic (caused by humans) or from natural sources. Volcanic eruptions, soil erosion, sea salt or the import of desert sand are all examples of possible sources of particulate matter."</string>
+    <string name="textView13">>>"Where Do PM2.5 Come From. Fine particles can come from various sources. They include power plants, motor vehicles, airplanes, residential wood burning, forest fires, agricultural burning, volcanic eruptions and dust storms."</string>
     <string name="place_holder">---</string>
-    <string name="pressure">Pressure</string>
-    <string name="humidity">Humidity</string>
-    <string name="wind">Wind</string>
+    <string name="b1">view causes</string>
+    <string name="textView14">>>>"People experience a wide range of health effects from being exposed to air pollution. Effects can be broken down into short-term effects and long-term effects.</string>
+    <string name="textView15">>>>"Short-term effects, which are temporary, include illnesses such as pneumonia or bronchitis. They also include discomfort such as irritation to the nose, throat, eyes, or skin. Air pollution can also cause headaches, dizziness, and nausea. Bad smells made by factories, garbage, or sewer systems are considered air pollution, too. These odors are less serious but still unpleasant.view causes "</string>
+    <string name="textView16">>>>"Long-term effects of air pollution can last for years or for an entire lifetime. They can even lead to a persons death.Long-term health effects from air pollution include heart disease, lung cancer, and respiratory diseases such as emphysema. Air pollution can also cause long-term damage to peoples nerves, brain, kidneys, liver, and other organs. Some scientists suspect air pollutants cause birth defects. Nearly 2.5 million people die worldwide each year from the effects of outdoor or indoor air pollution." </string>
+    <string name="textView17">>>>"People react differently to different types of air pollution. Young children and older adults, whose immune systems tend to be weaker, are often more sensitive to pollution. Conditions such as asthma, heart disease, and lung disease can be made worse by exposure to air pollution. The length of exposure and amount and type of pollutants are also factors."</string>
+    <string name="textView18">view causes</string>
+    <string name="b3">Effects</string>
+    <string name="b2">view health condition</string>
+    <string name="pressure">causes</string>
+    <string name="humidity">condition</string>
+    <string name="wind">Effects</string>
     <string name="attribution">Attributions</string>
     <string name="pollutants_aqi">Pollutants AQI</string>
 
@@ -74,4 +101,7 @@
     <string name="humidity_unit">%1$.0f%%</string>
     <string name="pressureplace_holder_unit">%1$.1f mb</string>
     <string name="wind_unit">%1$.1f m/s</string>
+    <string name="textview5" />
+    <string name="select_city">Select City</string>
+    <string name="button">search</string>
 </resources>

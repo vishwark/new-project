@@ -5,6 +5,8 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -15,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.pollutioncontrolboard.adapters.PollutantsAdapter;
 import com.example.pollutioncontrolboard.data.model.AqiHelperModel;
+import com.example.pollutioncontrolboard.data.model.Health;
 import com.example.pollutioncontrolboard.data.model.Pollutant;
 
 import org.json.JSONException;
@@ -24,7 +27,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PollutionViewActivity  extends AppCompatActivity {
-
+    Button btn1,btn2,btn3;
     private TextView aqiTextView, temperatureTextView, locationTextView, pressureTextView, humidityTextView, windTextView, attributionTextView;
     private RecyclerView pollutantsRecyclerView;
     AqiHelperModel aqiHelperModel;
@@ -42,6 +45,41 @@ public class PollutionViewActivity  extends AppCompatActivity {
         //Intent intent = getIntent();
         String selectedCity = getIntent().getStringExtra("city");
         init();
+        btn1=findViewById(R.id.button3);
+        btn2=findViewById(R.id.button7);
+        btn3=findViewById(R.id.button9);
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                onButtonClick((Button) view);
+                   Intent intent=new Intent(PollutionViewActivity.this,CausesActivity.class);
+                   startActivity(intent);
+
+            }
+
+        });
+
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                onButtonClick((Button) view);
+                Intent intent=new Intent(PollutionViewActivity.this, HealthActivity.class);
+                startActivity(intent);
+
+            }
+
+        });
+        btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                onButtonClick((Button) view);
+                Intent intent=new Intent(PollutionViewActivity.this, Effect.class);
+                startActivity(intent);
+
+            }
+
+        });
+
         new Getpollution().execute(selectedCity);
         /*if (aqiHelperModel.getPressure() != null)
             pressureTextView.setText(getString(R.string.pressure_unit, iaqi.getPressure().getV()));
@@ -57,8 +95,8 @@ public class PollutionViewActivity  extends AppCompatActivity {
         temperatureTextView = findViewById(R.id.temperature_text_view);
         locationTextView = findViewById(R.id.location_text_view);
         pressureTextView = findViewById(R.id.pressure_text_view);
-        humidityTextView = findViewById(R.id.humidity_text_view);
-        windTextView = findViewById(R.id.wind_text_view);
+//        humidityTextView = findViewById(R.id.humidity_text_view);
+//        windTextView = findViewById(R.id.wind_text_view);
         attributionTextView = findViewById(R.id.attribution_text_view);
         setupRecyclerView();
     }

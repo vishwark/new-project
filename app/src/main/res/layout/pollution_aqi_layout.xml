@@ -170,15 +170,22 @@
                     <TextView
                         style="@style/TextAppearanceHeading"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:text="@string/pressure" />
 
                     <TextView
                         android:id="@+id/pressure_text_view"
                         style="@style/TextAppearance"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="1dp"
                         android:text="@string/place_holder" />
+
+                    <Button
+                        android:id="@+id/button3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/b1"
+                        android:textColor="@color/blue" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -195,12 +202,13 @@
                         android:layout_height="match_parent"
                         android:text="@string/humidity" />
 
-                    <TextView
-                        android:id="@+id/humidity_text_view"
-                        style="@style/TextAppearance"
+                    <Button
+                        android:id="@+id/button7"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/place_holder" />
+                        android:layout_height="wrap_content"
+                        android:text="@string/b2"
+                        android:textColor="@color/blue" />
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -217,12 +225,13 @@
                         android:layout_height="match_parent"
                         android:text="@string/wind" />
 
-                    <TextView
-                        android:id="@+id/wind_text_view"
-                        style="@style/TextAppearance"
+                    <Button
+                        android:id="@+id/button9"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/place_holder" />
+                        android:layout_height="wrap_content"
+                        android:text="@string/b3"
+                        android:textColor="@color/blue" />
+
                 </LinearLayout>
 
             </LinearLayout>

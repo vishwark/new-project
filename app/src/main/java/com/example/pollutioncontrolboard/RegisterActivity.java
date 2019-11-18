@@ -13,7 +13,8 @@ import com.example.pollutioncontrolboard.data.AppRepositry;
 import com.example.pollutioncontrolboard.data.model.User;
 
 
-public class RegisterActivity extends AppCompatActivity {
+public class RegisterActivity extends AppCompatActivity
+{
 
 
     private EditText etUserName,etEmail,etPassword;
@@ -23,7 +24,8 @@ public class RegisterActivity extends AppCompatActivity {
     AppRepositry appRepositry;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         //setTheme(R.style.AppTheme_Dark);
         setContentView(R.layout.register_layout);
@@ -76,7 +78,8 @@ public class RegisterActivity extends AppCompatActivity {
         });
     }
 
-    private void registerUser(User user){
+    private void registerUser(User user)
+    {
         appRepositry.insertUser(user);
         Toast.makeText(RegisterActivity.this,"Successfully registered.",Toast.LENGTH_LONG).show();
         Intent intent = new Intent(this,LoginActivity.class);

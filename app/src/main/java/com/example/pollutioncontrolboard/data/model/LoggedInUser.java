@@ -3,7 +3,8 @@ package com.example.pollutioncontrolboard.data.model;
 /**
  * Data class that captures user information for logged in users retrieved from LoginRepository
  */
-public class LoggedInUser {
+public class
+LoggedInUser {
 
     private String userId;
     private String displayName;
