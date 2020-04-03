@@ -22,17 +22,17 @@ public abstract class AppDatabase extends RoomDatabase
 
     // added on friday
     public static AppDatabase getAppDatabase(Context context) {
-          if (INSTANCE == null) {
-                INSTANCE = Room.databaseBuilder(context.getApplicationContext(), AppDatabase.class, "user-database").allowMainThreadQueries().build();
+        if (INSTANCE == null) {
+            INSTANCE = Room.databaseBuilder(context.getApplicationContext(), AppDatabase.class, "user-database").allowMainThreadQueries().build();
               /* allow queries on the main thread.
                         Don't do this on a real app! See PersistenceBasicSample for an example.*/
 
         }
-           return INSTANCE;
-        }
+        return INSTANCE;
+    }
 
-      public static void destroyInstance() {
+    public static void destroyInstance() {
         INSTANCE = null;
-       }
+    }
 
 }

@@ -12,6 +12,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.pollutioncontrolboard.data.AppRepositry;
 import com.example.pollutioncontrolboard.data.model.User;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class LoginActivity  extends AppCompatActivity {
 
     EditText etUserName,etPassword;
@@ -67,5 +70,20 @@ public class LoginActivity  extends AppCompatActivity {
                Toast.makeText(this,"Invalid username or password. Please try again ",Toast.LENGTH_LONG).show();
            }
        }
+    }
+
+//    public void getUsers(View view)
+//    {
+//        List users = appRepositry.getAllUsers();
+//        for(int i=0;i<users.size();i++)
+//        {
+//            Toast.makeText(this, (String) users.get(i),Toast.LENGTH_SHORT).show();
+//        }
+//    }
+
+    public void admin(View view)
+    {
+        Intent intent = new Intent(this,Admin.class);
+        startActivity(intent);
     }
 }

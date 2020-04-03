@@ -36,25 +36,25 @@
     <string name="menu_send">Send</string>
     <string name="co">co</string>
     <string name="textView4">>>"Good" AQI is 0 to 50. Air quality is considered satisfactory, and air pollution poses little or no risk.
-    For example, people who are unusually sensitive to ozone may experience respiratory symptoms.</string>
-    <string name="textView5">>>"Unhealthy for Sensitive Groups" AQI is 101 to 150. Although general public is not likely to be affected at this AQI range, people with lung disease, older adults and children are at a greater risk from exposure to ozone, whereas persons with heart and lung disease, older adults and children are at greater risk from the presence of particles in the air.</string>
-    <string name="textView6">>>"Unhealthy" AQI is 151 to 200. Everyone may begin to experience some adverse health effects, and members of the sensitive groups may experience more serious effects.</string>
-    <string name="textView7">>>"Very Unhealthy" AQI is 201 to 300. This would trigger a health alert signifying that everyone may experience more serious health effects.</string>
-    <string name="textView8">>>"Hazardous" AQI greater than 300. This would trigger a health warnings of emergency conditions. The entire population is more likely to be affected.</string>
+    For example, people who are unusually sensitive to ozone may experience respiratory symptoms.                   </string>
+    <string name="textView5">>>"Unhealthy for Sensitive Groups" AQI is 101 to 150. Although general public is not likely to be affected at this AQI range, people with lung disease, older adults and children are at a greater risk from exposure to ozone, whereas persons with heart and lung disease, older adults and children are at greater risk from the presence of particles in the air.                     </string>
+    <string name="textView6">>>"Unhealthy" AQI is 151 to 200. Everyone may begin to experience some adverse health effects, and members of the sensitive groups may experience more serious effects.                            </string>
+    <string name="textView7">>>"Very Unhealthy" AQI is 201 to 300. This would trigger a health alert signifying that everyone may experience more serious health effects.                                         </string>
+    <string name="textView8">>>"Hazardous" AQI greater than 300. This would trigger a health warnings of emergency conditions. The entire population is more likely to be affected.                                                   </string>
     <string name="title_activity_city">City</string>
     <string name="city_label">View Pollution by City</string>
     <string name="aqi_title">AQI</string>
-    <string name="textView9">>>>"At a domestic level, faulty gas appliances and cigarette smoking are significant sources of carbon monoxide. Natural processes produce relatively small amounts. Carbon monoxide reacts with other pollutants in the air to form potentially harmful ground level ozone. This occurs close to the site of emission"</string>
-    <string name="textView10">>>>"These gases, especially SO2, are emitted by the burning of fossil fuels — coal, oil, and diesel — or other materials that contain sulfur. Sources include power plants, metals processing and smelting facilities, and vehicles."</string>
-    <string name="textView11">>>"Nitrogen Dioxide (NO2) Pollution. NO2 primarily gets in the air from the burning of fuel. NO2 forms from emissions from cars, trucks and buses, power plants, and off-road equipment."</string>
-    <string name="textView12">>>"Particulate matter particles can either originate from antropogenic (caused by humans) or from natural sources. Volcanic eruptions, soil erosion, sea salt or the import of desert sand are all examples of possible sources of particulate matter."</string>
-    <string name="textView13">>>"Where Do PM2.5 Come From. Fine particles can come from various sources. They include power plants, motor vehicles, airplanes, residential wood burning, forest fires, agricultural burning, volcanic eruptions and dust storms."</string>
+    <string name="textView9">>>>"At a domestic level, faulty gas appliances and cigarette smoking are significant sources of carbon monoxide. Natural processes produce relatively small amounts. Carbon monoxide reacts with other pollutants in the air to form potentially harmful ground level ozone. This occurs close to the site of emission"                      </string>
+    <string name="textView10">>>>"These gases, especially SO2, are emitted by the burning of fossil fuels — coal, oil, and diesel — or other materials that contain sulfur. Sources include power plants, metals processing and smelting facilities, and vehicles."                  </string>
+    <string name="textView11">>>"Nitrogen Dioxide (NO2) Pollution. NO2 primarily gets in the air from the burning of fuel. NO2 forms from emissions from cars, trucks and buses, power plants, and off-road equipment."              </string>
+    <string name="textView12">>>"Particulate matter particles can either originate from antropogenic (caused by humans) or from natural sources. Volcanic eruptions, soil erosion, sea salt or the import of desert sand are all examples of possible sources of particulate matter."              </string>
+    <string name="textView13">>>"Where Do PM2.5 Come From. Fine particles can come from various sources. They include power plants, motor vehicles, airplanes, residential wood burning, forest fires, agricultural burning, volcanic eruptions and dust storms."                          </string>
     <string name="place_holder">---</string>
     <string name="b1">view causes</string>
-    <string name="textView14">>>>"People experience a wide range of health effects from being exposed to air pollution. Effects can be broken down into short-term effects and long-term effects.</string>
-    <string name="textView15">>>>"Short-term effects, which are temporary, include illnesses such as pneumonia or bronchitis. They also include discomfort such as irritation to the nose, throat, eyes, or skin. Air pollution can also cause headaches, dizziness, and nausea. Bad smells made by factories, garbage, or sewer systems are considered air pollution, too. These odors are less serious but still unpleasant.view causes "</string>
-    <string name="textView16">>>>"Long-term effects of air pollution can last for years or for an entire lifetime. They can even lead to a persons death.Long-term health effects from air pollution include heart disease, lung cancer, and respiratory diseases such as emphysema. Air pollution can also cause long-term damage to peoples nerves, brain, kidneys, liver, and other organs. Some scientists suspect air pollutants cause birth defects. Nearly 2.5 million people die worldwide each year from the effects of outdoor or indoor air pollution." </string>
-    <string name="textView17">>>>"People react differently to different types of air pollution. Young children and older adults, whose immune systems tend to be weaker, are often more sensitive to pollution. Conditions such as asthma, heart disease, and lung disease can be made worse by exposure to air pollution. The length of exposure and amount and type of pollutants are also factors."</string>
+    <string name="textView14">>>>"People experience a wide range of health effects from being exposed to air pollution. Effects can be broken down into short-term effects and long-term effects .                                                         </string>
+    <string name="textView15">>>>"Short-term effects, which are temporary, include illnesses such as pneumonia or bronchitis. They also include discomfort such as irritation to the nose, throat, eyes, or skin. Air pollution can also cause headaches, dizziness, and nausea. Bad smells made by factories, garbage, or sewer systems are considered air pollution, too. These odors are less serious but still unpleasant.view causes "                                      </string>
+    <string name="textView16">>>>"Long-term effects of air pollution can last for years or for an entire lifetime. They can even lead to a persons death.Long-term health effects from air pollution include heart disease, lung cancer, and respiratory diseases such as emphysema. Air pollution can also cause long-term damage to peoples nerves, brain, kidneys, liver, and other organs. Some scientists suspect air pollutants cause birth defects. Nearly 2.5 million people die worldwide each year from the effects of outdoor or indoor air pollution."                                                                          </string>
+    <string name="textView17">>>>"People react differently to different types of air pollution. Young children and older adults, whose immune systems tend to be weaker, are often more sensitive to pollution. Conditions such as asthma, heart disease, and lung disease can be made worse by exposure to air pollution. The length of exposure and amount and type of pollutants are also factors."                                    </string>
     <string name="textView18">view causes</string>
     <string name="b3">Effects</string>
     <string name="b2">view health condition</string>
@@ -83,18 +83,17 @@
     <string name="hazardous_range">300+</string>
 
     <!--Health Implications-->
-    <string name="good_health_implications">Air quality is considered satisfactory, and air pollution poses little or no risk.</string>
-    <string name="moderate_health_implications">Air quality is acceptable; however, for some pollutants there may be a moderate health concern for a very small number of people who are unusually sensitive to air pollution.</string>
-    <string name="unhealthy_for_sensitive_health_implications">Members of sensitive groups may experience health effects. The general public is not likely to be affected.</string>
-    <string name="unhealthy_health_implications">Everyone may begin to experience health effects; members of sensitive groups may experience more serious health effects.</string>
-    <string name="very_unhealthy_health_implications">Health warnings of emergency conditions. The entire population is more likely to be affected.</string>
-    <string name="hazardous_health_implications">Health alert: everyone may experience more serious health effects.</string>
+    <string name="good_health_implications">Air quality is considered satisfactory, and air pollution poses little or no risk.                                           </string>
+    <string name="moderate_health_implications">Air quality is acceptable; however, for some pollutants there may be a moderate health concern for a very small number of people who are unusually sensitive to air pollution.                        </string>
+    <string name="unhealthy_for_sensitive_health_implications">Members of sensitive groups may experience health effects. The general public is not likely to be affected.                                     </string>
+    <string name="unhealthy_health_implications">Everyone may begin to experience health effects; members of sensitive groups may experience more serious health effects.                                        </string>
+    <string name="very_unhealthy_health_implications">Health warnings of emergency conditions. The entire population is more likely to be affected.                                                               </string>
+    <string name="hazardous_health_implications">Health alert: everyone may experience more serious health effects.                                                                                </string>
 
     <string name="appwidget_text">AQI</string>
     <string name="add_widget">Add widget</string>
 
     <string name="shareText">Hey, Check the Air Quality in your area with this app: https://pollutionmonitor.page.link/RtQw</string>
-
 
 
     <string name="temperature_unit_celsius">%1$.1f &#176;C</string>
@@ -104,4 +103,9 @@
     <string name="textview5" />
     <string name="select_city">Select City</string>
     <string name="button">search</string>
+    <string name="tx1">City</string>
+    <string name="tx2">Assign Job</string>
+    <string name="txt3">Activity</string>
+    <string name="bt2">save</string>
+    <string name="bt3">Load</string>
 </resources>

@@ -42,6 +42,11 @@ public class City extends AppCompatActivity  implements AdapterView.OnItemSelect
     private String TAG = City.class.getSimpleName();
     ArrayList<HashMap<String, String>> pollutionList;
     AppRepositry appRepositry;
+    Spinner spinner;
+
+
+    public String selectedCity;
+    List<String> cities = new ArrayList<String>();
 
     Button SubmitButton ;
 
@@ -58,19 +63,16 @@ public class City extends AppCompatActivity  implements AdapterView.OnItemSelect
     DatabaseReference databaseReference;
     public static final String Database_Path = "feedback";
 
-    Spinner spinner;
-    String selectedCity;
-    List<String> cities = new ArrayList<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setTheme(R.style.AppTheme_Dark);
+//        setTheme(R.style.AppTheme_Dark);
         appRepositry = new AppRepositry(getApplicationContext());
         setContentView(R.layout.content_city);
         spinner = findViewById(R.id.spinner_search);
         Button button = findViewById(R.id.button);
-        String city = "agra,ahmedabad,amaravathi,ambala,amrithsar,ankleshwar,asansol,aurangabad,bangalore,bathinda,brajrajnagar,bulandshahr,chandrapur,chennai,coimbatore,delhi,durgapur,dwarka,eloor,faridabad,fatehabad,gandhinagar,gaya,ghaziabad,greater nioda,gurugram,haldia,hapur,hisar,howrah,hubballi,hyderabad,jorapokhar,kalaburagi,kanpur,karnal,khanna,kota,kurukshetra,lucknow,maihar,manali,mandideep,mumbai,muzaffarpur,nashik,navi mumbai,noida,panipat,pantna,patiyala,pithampur,pune,ratlam,rupnagar,satna,siluguri,singrauli,sirsa,solapur,talcher,thiruvananthapuram,tirupati,udaipur,ujjain,visakhapatnam";
+        String city = "agra,ahmedabad,amaravathi,ambala,amrithsar,ankleshwar,asansol,aurangabad,bengaluru,bathinda,brajrajnagar,bulandshahr,chandrapur,chennai,coimbatore,delhi,durgapur,dwarka,eloor,faridabad,fatehabad,gandhinagar,gaya,ghaziabad,greater nioda,gurugram,haldia,hapur,hisar,howrah,hubballi,hyderabad,jorapokhar,kalaburagi,kanpur,karnal,khanna,kota,kurukshetra,lucknow,maihar,manali,mandideep,mumbai,muzaffarpur,nashik,navi mumbai,noida,panipat,pantna,patiyala,pithampur,pune,ratlam,rupnagar,satna,siluguri,singrauli,sirsa,solapur,talcher,thiruvananthapuram,tirupati,udaipur,ujjain,visakhapatnam";
 
         cities = Arrays.asList(city.split("\\s*,\\s*"));
         ArrayAdapter adapter = new ArrayAdapter(this,android.R.layout.simple_spinner_item,cities);
@@ -117,6 +119,7 @@ public class City extends AppCompatActivity  implements AdapterView.OnItemSelect
 
                 // Adding phone number into class function object.
                 studentDetails.setStudentPhoneNumber(NumberHolder);
+               // studentDetails.setStudentfeedback(NumberHolder);
 
                 // Getting the ID from firebase database.
                 String StudentRecordIDFromServer = databaseReference.push().getKey();
@@ -149,6 +152,10 @@ public class City extends AppCompatActivity  implements AdapterView.OnItemSelect
         selectedCity = parent.getItemAtPosition(position).toString();
         Toast.makeText(getApplicationContext(),selectedCity, Toast.LENGTH_LONG).show();
     }
+    public String getSelectedCity() {
+        return selectedCity;
+    }
+
 
     @Override
     public void onNothingSelected(AdapterView<?> parent)

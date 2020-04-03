@@ -9,11 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Content"></activity>
+        <activity android:name=".Add" />
+        <activity android:name=".Admin" />
         <activity
             android:name=".City"
-            android:label="@string/city_label" >
-        </activity>
-
+            android:label="@string/city_label" />
+        <activity
             android:name=".RegisterActivity"
             android:label="Register" />
         <activity
@@ -22,13 +24,15 @@
         <activity
             android:name=".PollutionViewActivity"
             android:label="AQI" />
-
         <activity
             android:name=".HealthActivity"
             android:label="Health" />
         <activity
             android:name=".CausesActivity"
             android:label="Causes" />
+<!--        <activity-->
+<!--            android:name=".Content"-->
+<!--            android:label="Assign Activity" />-->
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login">
@@ -39,6 +43,12 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
+
+        <provider
+            android:name=".MyContentProvider"
+            android:authorities="com.vishwas.my.company.provider"
+            android:enabled="true"
+            android:exported="true" />
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" />

@@ -52,8 +52,8 @@ public class PollutionViewActivity  extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 //                onButtonClick((Button) view);
-                   Intent intent=new Intent(PollutionViewActivity.this,CausesActivity.class);
-                   startActivity(intent);
+                Intent intent=new Intent(PollutionViewActivity.this,CausesActivity.class);
+                startActivity(intent);
 
             }
 

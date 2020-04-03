@@ -50,9 +50,9 @@ public class AppRepositry {
 
     public void insertpollutiondata(List<Pollution> pollution){
         appDatabase.userDao().insertPollution(pollution.get(0));
-   }
+    }
 
-   public User getUserData(String username,String password){
+    public User getUserData(String username,String password){
         return appDatabase.userDao().getUserData(username,password);
-   }
+    }
 }
