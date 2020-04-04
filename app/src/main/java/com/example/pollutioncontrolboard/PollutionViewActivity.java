@@ -52,7 +52,7 @@ public class PollutionViewActivity  extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 //                onButtonClick((Button) view);
-                Intent intent=new Intent(PollutionViewActivity.this,CausesActivity.class);
+                Intent intent=new Intent(PollutionViewActivity.this,Recyclerview.class);
                 startActivity(intent);
 
             }
@@ -63,7 +63,7 @@ public class PollutionViewActivity  extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 //                onButtonClick((Button) view);
-                Intent intent=new Intent(PollutionViewActivity.this, HealthActivity.class);
+                Intent intent=new Intent(PollutionViewActivity.this,HealthActivity.class);
                 startActivity(intent);
 
             }

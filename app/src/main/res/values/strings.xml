@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">PollutionControlBoard</string>
+    <string name="launch">AirMo.......</string>
     <string name="title_activity_login">AirMo</string>
     <string name="prompt_email">Username</string>
     <string name="prompt_password">Password</string>
@@ -23,7 +24,7 @@
 
     <string name="share">"Add your idea here"</string>
     <string name="btn10">SUBMIT</string>
-
+    <string name="laa">.....feel the Air..</string>
 
     <string name="idea">Share your AIR pollution control Ideas</string>
 
@@ -108,4 +109,39 @@
     <string name="txt3">Activity</string>
     <string name="bt2">save</string>
     <string name="bt3">Load</string>
+
+
+    <string name="recycler_view">Causes</string>
+    <string name="textview">TextView</string>
+    <string-array name="gases">
+        <item>CARBON DIOXIDE</item>
+        <item>NITROUS OXIDE</item>
+        <item>OZONE</item>
+        <item>PM 2.5</item>
+        <item>PM 10</item>
+        <item>SULFUR DIOXIDE</item>
+        <item>CONCLUSION</item>
+    </string-array>
+
+    <string-array name="causes">
+        <item>>>>>"At a domestic level, faulty gas appliances and cigarette smoking are significant sources of carbon monoxide. Natural processes produce relatively small amounts. Carbon monoxide reacts with other pollutants in the air to form potentially harmful ground level ozone. This occurs close to the site of emission"   </item>
+        <item>>>>"Nitrogen Dioxide (NO2) Pollution. NO2 primarily gets in the air from the burning of fuel. NO2 forms from emissions from cars, trucks and buses, power plants, and off-road equipment."  </item>
+        <item> >>>>"In the Earth's lower atmosphere, near ground level, ozone is formed when pollutants emitted by cars, power plants, industrial boilers, refineries, chemical plants, and other sources react chemically in the presence of sunlight. Ozone at ground level is a harmful air pollutant."</item>
+        <item> >>>"Where Do PM2.5 Come From. Fine particles can come from various sources. They include power plants, motor vehicles, airplanes, residential wood burning, forest fires, agricultural burning, volcanic eruptions and dust storms."  </item>
+        <item> >>>"Particulate matter particles can either originate from antropogenic (caused by humans) or from natural sources. Volcanic eruptions, soil erosion, sea salt or the import of desert sand are all examples of possible sources of particulate matter."  </item>
+        <item>>>>>"It is formed when fuel containing sulfur, such as coal and oil, is burned, creating air pollution. Most sulfur dioxide air pollution comes from the burning of coal and oil in power plants. It is also emitted by trains, large ships, and some diesel equipment that burns high sulfur fuel, and by volcanic eruptions."</item>
+        <item>>>>>"In many countries heart disease is a leading cause of death and even a small contribution from air pollution could mean a significant and important effect on public heath. On an individual level, the risk to health from air pollution is very much smaller than that posed by active cigarette smoking or accidents"</item>
+    </string-array>
+
+    <string-array name="health">
+        <item>..>>>>When you have too much carbon dioxide in blood for several days or weeks, the condition is known as chronic hypercapnia. This can happen due to diseases like emphysema, in which the lungs are incapable of adequate gas exchange.</item>
+        <item>...>>>he main effect of breathing in raised levels of nitrogen dioxide is the increased likelihood of respiratory problems. Nitrogen dioxide inflames the lining of the lungs, and it can reduce immunity to lung infections. This can cause problems such as wheezing, coughing, colds, flu and bronchitis.</item>
+        <item>....>>>>Ozone is a powerful oxidant that can irritate the airways. Ozone in the air we breathe can harm our health, especially on hot sunny days when ozone can reach unhealthy levels. Even relatively low levels of ozone can cause health effects.</item>
+        <item>....>>>>Long-term exposure to ambient particulate matter with aerodynamic diameter 2.5 µm (referred to as PM2.5) has potential health risks due to cardiovascular and respiratory diseases leading to premature mortality</item>
+        <item>....>>>he size of particles is directly linked to their potential for causing health problems. Small particles less than 10 micrometers in diameter pose the greatest problems, because they can get deep into your lungs, and some may even get into your bloodstream. 1. premature death in people with heart or lung disease 2. nonfatal heart attacks 3. irregular heartbeat 4. aggravated asthma 5. decreased lung function 6. increased respiratory symptoms</item>
+        <item>.>>>>>>>Sulfur dioxide (SO 2) is a colorless, reactive air pollutant with a strong odor. This gas can be a threat to human health, animal health, and plant life. The main sources of sulfur dioxide emissions are from fossil fuel combustion and natural volcanic activity.</item>
+        <item>.....>>>>>Air pollution can severely impact health, and can lead to premature death since it reduces lung function, increases infection and cancer risk, and worsens health in those with heart or lung disease.....</item>
+
+    </string-array>
+
 </resources>
