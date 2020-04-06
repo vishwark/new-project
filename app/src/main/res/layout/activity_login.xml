@@ -32,8 +32,8 @@
 
     <Button
         android:id="@+id/btnRegister"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="277dp"
+        android:layout_height="45dp"
         android:layout_marginTop="48dp"
         android:background="@drawable/img1"
         android:backgroundTint="@color/colorPrimary"
@@ -45,8 +45,8 @@
 
     <Button
         android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="104dp"
+        android:layout_height="41dp"
         android:background="@drawable/img1"
         android:onClick="admin"
         android:text="Admin Panel"
@@ -96,6 +96,7 @@
         android:layout_width="289dp"
         android:layout_height="45dp"
         android:text="@string/name"
+        android:textAlignment="center"
         android:textColor="@color/red"
         android:textColorHighlight="#FFEB3B"
         android:textSize="18sp"

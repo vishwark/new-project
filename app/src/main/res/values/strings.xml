@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">PollutionControlBoard</string>
+    <string name="app_name">AirMo</string>
     <string name="launch">AirMo.......</string>
     <string name="title_activity_login">AirMo</string>
     <string name="prompt_email">Username</string>
@@ -10,7 +10,7 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
-    <string name="name">"AIR POLLUTION MONITORING APP"</string>
+    <string name="name">"LOGIN"</string>
     <string name="todo">hello</string>
     <string name="title_activity_main2">Main2Activity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
