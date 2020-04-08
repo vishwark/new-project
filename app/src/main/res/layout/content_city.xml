@@ -121,6 +121,7 @@
         android:layout_width="244dp"
         android:layout_height="79dp"
         android:text="@string/idea"
+        android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold|italic"
         android:typeface="monospace"

@@ -1,6 +1,9 @@
 package com.example.pollutioncontrolboard;
 
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 
@@ -83,10 +86,25 @@ public class City extends AppCompatActivity  implements AdapterView.OnItemSelect
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Selected city is :"+selectedCity,Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(City.this,PollutionViewActivity.class);
-                intent.putExtra("city",selectedCity);
-                startActivity(intent);
+
+                boolean connected = false;
+                ConnectivityManager connectivityManager = (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
+                NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
+                // if no network is available networkInfo will be null
+                // otherwise check if we are connected
+                if (networkInfo != null && networkInfo.isConnected()) {
+                    connected= true;
+                    Toast.makeText(getApplicationContext(), "Selected city is :"+selectedCity,Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(City.this,PollutionViewActivity.class);
+                    intent.putExtra("city",selectedCity);
+                    startActivity(intent);
+                }
+                else {
+                connected= false;
+                    Toast.makeText(getApplicationContext(), "Please connect to INTERNET ",Toast.LENGTH_SHORT).show();
+
+
+                }
             }
         });
 
